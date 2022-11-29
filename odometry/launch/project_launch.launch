@@ -1,0 +1,21 @@
+<launch>
+
+    <param name="radius" value="0.077" />    <!-- initial radius 0.07 -->
+    <param name="length" value="0.204" />     <!-- initial length 0.200 -->
+    <param name="width" value="0.174" />    <!-- initial width 0.169 -->
+    <param name="CPR" value="40" />         <!-- initial CPR 42 -->
+    <param name="gear_ratio" value="5" />
+    <param name="pi" value="3.14159" />
+    <param name="x0" value="0.0" />
+    <param name="y0" value="0.0" />
+    <param name="theta0" value="0.0" />
+
+
+    <node pkg="project" type="kinematics" name="kinematics" output="screen" />
+    <node pkg="project" type="odometry" name="odometry" output="screen" />
+    <node pkg="project" type="controlspeed" name="controlspeed" output="screen" />
+    <node pkg="project" type="broadcaster" name="broadcaster" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="odom" args="0 0 0 0 0 0 1 world odom" />
+    <node pkg="rviz" type="rviz" name="rviz" />
+
+</launch>
