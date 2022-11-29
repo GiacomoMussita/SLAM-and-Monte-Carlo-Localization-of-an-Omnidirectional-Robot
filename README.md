@@ -1,4 +1,6 @@
 # SLAM and Monte Carlo Localization of an Omnidirectional Robot
+
+NOTE: the repository does not contain the bags since the file are too big. Please drop me a message if you want the bags I used.
 # A. Odometry
 
 PACKAGE NAME: `project`
